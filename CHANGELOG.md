@@ -13,6 +13,8 @@
 ### Bug fixes
 * Targeting conditions of unknown (unsupported) types are now evaluated to `false` instead of `true`, so visitors are no longer targeted by segments containing web-specific conditions the SDK does not support.
 
+[setEventHandler]: https://docs.kameleoon.com/developer-docs/sdks/mobile-sdks/flutter-sdk#seteventhandler
+
 ## 3.8.0 - 2026-07-13
 ### Features
 * Upgraded Flutter SDK to use [`iOS SDK 4.27.3`](https://github.com/Kameleoon/client-swift/blob/main/CHANGELOG.md#4273---2026-07-09) / [`Android SDK 4.26.3`](https://github.com/Kameleoon/client-android/blob/main/CHANGELOG.md#4263---2026-07-09) / [`JS/TS SDK 4.24.5`](https://github.com/Kameleoon/client-js/blob/main/CHANGELOG.md#4245-2026-07-10)
