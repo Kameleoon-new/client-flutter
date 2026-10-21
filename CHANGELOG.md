@@ -1,6 +1,10 @@
 [customdata]: https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/flutter-sdk/#customdata
 
 # Changelog
+## 3.9.1 - 2026-10-21
+### Bug fixes
+* Removed the deprecated `jcenter()` repository from the Android build configuration in favor of `mavenCentral()`, so the SDK no longer blocks applications upgrading to Gradle 9. (Only Android)
+
 ## 3.9.0 - 2026-09-02
 ### Features
 * Upgraded Flutter SDK to use [`iOS SDK 4.28.0`](https://github.com/Kameleoon/client-swift/blob/main/CHANGELOG.md#4280) / [`Android SDK 4.27.0`](https://github.com/Kameleoon/client-android/blob/main/CHANGELOG.md#4270) / [`JS/TS SDK 4.25.0`](https://github.com/Kameleoon/client-js/blob/main/CHANGELOG.md#4250-2026-08-24)
