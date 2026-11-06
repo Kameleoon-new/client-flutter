@@ -1,6 +1,10 @@
 [customdata]: https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/flutter-sdk/#customdata
 
 # Changelog
+## 3.10.0 - 2026-11-06
+### Features
+* Added [Swift Package Manager](https://docs.flutter.dev/packages-and-plugins/swift-package-manager/for-app-developers) support for iOS. The SDK no longer triggers the `The following plugins do not support Swift Package Manager for iOS` warning, and applications that have migrated to Swift Package Manager can remove CocoaPods from their projects. CocoaPods integration is still supported, so existing projects do not require any changes. (Only iOS)
+
 ## 3.9.1 - 2026-10-21
 ### Bug fixes
 * Removed the deprecated `jcenter()` repository from the Android build configuration in favor of `mavenCentral()`, so the SDK no longer blocks applications upgrading to Gradle 9. (Only Android)
