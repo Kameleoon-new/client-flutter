@@ -1,6 +1,26 @@
 [customdata]: https://developers.kameleoon.com/feature-management-and-experimentation/mobile-sdks/flutter-sdk/#customdata
 
 # Changelog
+## 3.12.0 - 2026-11-23
+### Features
+* Upgraded Flutter SDK to use [`iOS SDK 4.30.0`](https://github.com/Kameleoon/client-swift/blob/main/CHANGELOG.md#4300---2026-11-23) / [`Android SDK 4.29.0`](https://github.com/Kameleoon/client-android/blob/main/CHANGELOG.md#4290---2026-11-23) / [`JS/TS SDK 4.28.0`](https://github.com/Kameleoon/client-js/blob/main/CHANGELOG.md#4280-2026-11-23)
+* Added the "greater than or equal to" (`>=`) and "less than or equal to" (`<=`) operators to the following targeting conditions:
+  - App version
+  - SDK type
+  - Browser (Only Web)
+  - Custom data (number)
+  - Number of page views (Only Web)
+  - Total number of visits
+  - Number of visits today
+  - Elapsed time since first visit
+  - Elapsed time since last visit
+
+  These operators will be available in the Kameleoon app with the platform release planned for December 2026.
+### Bug fixes
+* Fixed the Custom data condition with a number operator ignoring a matching value when the custom data also contained a non-numeric value before it (for example, `["invalid", "10"]` did not match `= 10`). Non-numeric values are now skipped individually. (Only Android)
+* Fixed an exception thrown during targeting when the App version, SDK type, Browser, Cookie or New or returning visitors condition has an operator unknown to the SDK. An error is logged and the condition is evaluated as not met. (Only Web)
+* Fixed the Custom data condition with the `Among values` operator not matching the numbers and booleans of the list (for example, `[10, 12]` did not match the value `10`). (Only Web)
+
 ## 3.11.0 - 2026-11-19
 ### Features
 * Upgraded Flutter SDK to use [`iOS SDK 4.29.0`](https://github.com/Kameleoon/client-swift/blob/main/CHANGELOG.md#4290---2026-11-19) / [`Android SDK 4.28.0`](https://github.com/Kameleoon/client-android/blob/main/CHANGELOG.md#4280---2026-11-19) / [`JS/TS SDK 4.27.2`](https://github.com/Kameleoon/client-js/blob/main/CHANGELOG.md#4272-2026-11-19)
